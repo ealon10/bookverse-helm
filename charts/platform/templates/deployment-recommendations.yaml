@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: recommendations
 spec:
-  replicas: {{ default 1 .Values.recommendations.replicas }}
+  replicas: {{ .Values.recommendations.replicas | default 1 | int }}
   selector:
     matchLabels:
       app: recommendations

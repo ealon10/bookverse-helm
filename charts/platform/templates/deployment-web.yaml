@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: platform-web
 spec:
-  replicas: {{ default 1 .Values.web.replicas }}
+  replicas: {{ .Values.web.replicas | default 1 | int }}
   selector:
     matchLabels:
       app: platform-web

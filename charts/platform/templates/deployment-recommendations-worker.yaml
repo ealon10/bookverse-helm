@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: recommendations-worker
 spec:
-  replicas: {{ default 1 .Values.recommendations.worker.replicas }}
+  replicas: {{ .Values.recommendations.worker.replicas | default 1 | int }}
   selector:
     matchLabels:
       app: recommendations-worker

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: checkout
 spec:
-  replicas: {{ default 1 .Values.checkout.replicas }}
+  replicas: {{ .Values.checkout.replicas | default 1 | int }}
   selector:
     matchLabels:
       app: checkout
