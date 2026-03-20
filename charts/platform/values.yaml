@@ -28,7 +28,7 @@ web:
     type: ClusterIP
 inventory:
   repository: tsmemea.jfrog.io/bookverse-inventory-internal-docker-nonprod-local/inventory
-  tag: "2.7.39"
+  tag: "1.5.41"
   replicas: 1
   port: 8000
 recommendations:
